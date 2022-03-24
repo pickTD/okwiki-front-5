@@ -9,6 +9,26 @@ export default {
     Container,
     Draggable,
     Column
+  },
+  data () {
+    return {
+      columns: [
+        { title: 'To Do', id: 1 },
+        { title: 'In progress', id: 2 },
+        { title: 'Done', id: 3 }
+      ]
+    }
+  },
+  methods: {
+    handleColumnDrop (dropResult) {
+      const { removedIndex, addedIndex } = dropResult
+      const updatedColumns = [
+        ...this.columns.slice(0, removedIndex),
+        ...this.columns.slice(removedIndex + 1)
+      ]
+      updatedColumns.splice(addedIndex, 0, this.columns[removedIndex])
+      this.columns = updatedColumns
+    }
   }
 }
 </script>
@@ -17,9 +37,10 @@ export default {
   <container
     orientation="horizontal"
     class="board"
+    @drop="handleColumnDrop"
   >
-    <draggable v-for="i in 5" :key="i">
-      <column />
+    <draggable v-for="column in columns" :key="column.id">
+      <column :title="column.title" />
     </draggable>
   </container>
 </template>
@@ -27,7 +48,9 @@ export default {
 <style scoped>
 .board {
   width: 100%;
+  padding-top: 60px;
   display: flex;
+  justify-content: center;
   gap: 36px;
 }
 </style>
