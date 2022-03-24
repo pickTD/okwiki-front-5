@@ -5,3 +5,5 @@
 npm install
 npm run serve
 ```
+
+### Current state is available in local storage
