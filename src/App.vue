@@ -31,4 +31,21 @@ export default {
   background: #eff0f3;
   color: #2c3e50;
 }
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 4px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: lightblue auto 1px;
+}
 </style>
