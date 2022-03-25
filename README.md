@@ -1,9 +1,14 @@
 # Implement Trello-like cards positioning approach.
 
-## Project setup
+## Local project setup
 ```
 npm install
 npm run serve
 ```
+
+## Also available at
+> [infinite-ravine-69987.herokuapp.com](https://infinite-ravine-69987.herokuapp.com/)
+
+***
 
 ### Current state is available in local storage
