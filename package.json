@@ -1,11 +1,14 @@
 {
   "name": "okwiki-front-5",
   "version": "0.1.0",
-  "private": true,
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "scripts": {
-    "serve": "export SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
-    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
-    "lint": "export SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
