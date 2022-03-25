@@ -49,7 +49,7 @@ export default {
 .board {
   width: 100%;
   padding-top: 60px;
-  display: flex;
+  display: flex !important;
   justify-content: center;
   gap: 36px;
 }
